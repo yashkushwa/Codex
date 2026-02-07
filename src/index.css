@@ -1,0 +1,123 @@
+:root {
+  color-scheme: light;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  --ink: #111111;
+  --paper: #f2f2f2;
+  --line: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 1.1rem;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  gap: 2rem;
+}
+
+.header,
+.main,
+.footer {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  border-bottom: 4px solid var(--line);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line);
+  padding: 0.35rem 0.85rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.hero {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+}
+
+.lead {
+  max-width: 36rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  border: 3px solid var(--line);
+  background: #ffffff;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+  min-height: 100%;
+}
+
+.card h2 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+}
+
+.cta {
+  border: 3px solid var(--line);
+  background: var(--ink);
+  color: var(--paper);
+  padding: 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.footer {
+  border-top: 4px solid var(--line);
+  font-size: 0.9rem;
+  gap: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .header,
+  .main,
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .cta {
+    font-size: 0.9rem;
+  }
+}
